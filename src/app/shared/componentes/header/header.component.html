@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header-container">
+    <div class="header-logo">
+      <a href="/" class="logo-link">
+        <span>UniRenta</span>
+      </a>
+    </div>
+
+    <nav class="header-nav" [class.open]="isMenuOpen">
+      <a href="/" class="nav-link" (click)="closeMenu()">Iniciar Sesión</a>
+      <a href="/estudiante/dep-detail" class="nav-link" (click)="closeMenu()">Detalle</a>
+    </nav>
+    
+    <button 
+      class="menu-toggle" 
+      (click)="toggleMenu()"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-label="Toggle navigation menu">
+      <span class="hamburger-line" [class.open]="isMenuOpen"></span>
+      <span class="hamburger-line" [class.open]="isMenuOpen"></span>
+      <span class="hamburger-line" [class.open]="isMenuOpen"></span>
+    </button>
+  </div>
+</header>
